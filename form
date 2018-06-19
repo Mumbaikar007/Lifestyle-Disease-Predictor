@@ -1,0 +1,183 @@
+<form id="theWebUserForm">
+
+                <!--
+                <span class="thumb" style="height: 0px; width: 0px; top: 10px; margin-left: 7px; left: 161.653px;">
+                    <span class="value" >Unhealthy Eating Habits: </span>
+                    <span class="value">28</span>
+                </span>
+                -->
+
+                <!--
+                <div class="row">
+                    <div class="col s6">
+                        <label style="font-size: 25px; margin-top: 30px;"> Unhealthy Eating Habits: </label>
+                    </div>
+                    <div class="col s6">
+                        <p class="range-field col s6 m12" style="width: 250px;">
+                            <input type="range" min="1" max="5" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+                        </p>
+                    </div>
+                </div>
+                -->
+
+                <label style="font-size: 25px; color: black;"> Enter Your Age: </label>
+                <p class="range-field col s6 m12" style="width: 250px;">
+                    <!-- <label class="active" for="first_name">Your Age</label> -->
+                    <input placeholder="Age" name = "age" id="first_name" type="text" class="validate">
+                </p>
+
+                <label style="font-size: 25px; color: black;"> Unhealthy Eating Habits:</label>
+                <p class="range-field col s6 m12" style="width: 250px;">
+                    <input  name = "unhealthyEatingHabits" type="range" min="1" max="5" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+                </p>
+
+                <label style="font-size: 25px; color: black;">Lack of Physical Activity:</label>
+                <p class="range-field" style="width: 250px;">
+                    <input name = "lackOfPhysicalActivity" type="range" min="1" max="5" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+                </p>
+
+                <label style="font-size: 25px; color: black;">Stress and Anxiety: </label>
+                <p class="range-field" style="width: 250px;">
+                    <input name = "stressAndAnxiety" type="range" min="1" max="5" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+                </p>
+
+                <label style="font-size: 25px; color: black;">Obesity: </label>
+                <div class = "row">
+                    <div class = "input-field col s12">
+                        <p>
+                            <input id = "noO" type = "radio" name = "obesity"
+                                   value = "0" checked />
+                            <label style="font-size: 20px;color: black;" for = "noO">No</label>
+                        </p>
+
+                        <p>
+                            <input id = "yesO" type = "radio" name = "obesity"
+                                   value = "1" />
+                            <label style="font-size: 20px;color: black;" for = "yesO">Yes</label>
+                        </p>
+
+                    </div>
+                </div>
+                <br>
+
+                <label style="font-size: 25px; color: black;">Alcoholism: </label>
+                <div class = "row">
+                    <div class = "input-field col s12">
+                        <p>
+                            <input id = "noAl" type = "radio" name = "alcoholism"
+                                   value = "0" checked />
+                            <label style="font-size: 20px;color: black;" for = "noAl">No</label>
+                        </p>
+
+                        <p>
+                            <input id = "yesAl" type = "radio" name = "alcoholism"
+                                   value = "1" />
+                            <label style="font-size: 20px;color: black;" for = "yesAl">Yes</label>
+                        </p>
+
+                    </div>
+                </div>
+                <br/>
+
+
+                <label style="font-size: 25px; color: black;">Poor Sleep: </label>
+                <p class="range-field" style="width: 250px;">
+                    <input name = "poorSleep" type="range" min="1" max="5" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+                </p>
+
+
+                <label style="font-size: 25px; color: black;">Gender: </label>
+                <div class = "row">
+                    <div class = "input-field col s12">
+                        <p>
+                            <input id = "male" type = "radio" name = "gender"
+                                   value = "1" checked />
+                            <label style="font-size: 20px;color: black;" for = "male">Male</label>
+                        </p>
+
+                        <p>
+                            <input id = "female" type = "radio" name = "gender"
+                                   value = "0"/>
+                            <label style="font-size: 20px;color: black;" for = "female">Female</label>
+                        </p>
+
+                        <p>
+                            <input id = "other" type = "radio" name = "gender"
+                                   value = "1"/>
+                            <label style="font-size: 20px;color: black;" for = "other">Other</label>
+                        </p>
+                    </div>
+                </div>
+                <br>
+
+                <label style="font-size: 25px; color: black;">If he/she is currently suffering from any other lifestyle disease: </label>
+                <div class = "row">
+                    <div class = "input-field col s12">
+                        <p>
+                            <input id = "yesA" type = "radio" name = "anotherLifestyle"
+                                   value = "1" checked />
+                            <label style="font-size: 20px;color: black;" for = "yesA">Yes</label>
+                        </p>
+
+                        <p>
+                            <input id = "noA" type = "radio" name = "anotherLifestyle"
+                                   value = "0" />
+                            <label style="font-size: 20px;color: black;" for = "noA">No</label>
+                        </p>
+
+                    </div>
+                </div>
+                <br>
+
+                <label style="font-size: 25px; color: black;">Family history of a lifestyle disease: </label>
+                <div class = "row">
+                    <div class = "input-field col s12">
+                        <p>
+                            <input id = "yesH" type = "radio" name = "historyLifetyle"
+                                   value = "1" checked />
+                            <label style="font-size: 20px;color: black;" for = "yesH">Yes</label>
+                        </p>
+
+                        <p>
+                            <input id = "noH" type = "radio" name = "historyLifetyle"
+                                   value = "0" />
+                            <label style="font-size: 20px;color: black;" for = "noH">No</label>
+                        </p>
+
+                    </div>
+                </div>
+                <br>
+
+
+                <label style="font-size: 25px; color: black;">Smoking: </label>
+                <div class = "row">
+                    <div class = "input-field col s12">
+
+                        <p>
+                            <input id = "dailyS" type = "radio" name = "smoking"
+                                   value = "3" checked />
+                            <label style="font-size: 20px;color: black;" for = "dailyS">Daily</label>
+                        </p>
+
+                        <p>
+                            <input id = "sometimesS" type = "radio" name = "smoking"
+                                   value = "2"/>
+                            <label style="font-size: 20px;color: black;" for = "sometimesS">Sometimes</label>
+                        </p>
+
+                        <p>
+                            <input id = "neverS" type = "radio" name = "smoking"
+                                   value = "1"/>
+                            <label style="font-size: 20px;color: black;" for = "neverS">Never</label>
+                        </p>
+
+                    </div>
+                </div>
+                <br>
+
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+
+            </form>
+

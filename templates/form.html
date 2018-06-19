@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Fill this form</title>
+
+    <style>
+
+        p {
+            margin-left: -1px;
+        }
+
+        .center {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+        }
+
+        * {
+          margin: 0 auto;
+          }
+
+        #color-bar {
+          width: 100%;
+          height: 380px;
+          background-color: #4CAF50;
+          position: absolute;
+          z-index: -2;
+          top: 0;
+          }
+
+        #nav-bar {
+          height: 65px;
+          width: 100%;
+          background-color: #388E3C;
+          }
+
+        #content-parent {
+          width: 75%;
+          overflow: hidden;
+          position: relative;
+          background-color: white;
+          z-index: 3;
+          margin-top:125px;
+          box-shadow: 1px 1px 1px 1px #ccc;
+          }
+
+
+        @media only screen and (min-width: 601px) {
+
+            .centerCustom {
+                margin: auto;
+                width: 50%;
+            }
+
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            .centerCustom {
+            }
+        }
+
+
+
+
+    </style>
+
+    <link rel = "stylesheet"
+          href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel = "stylesheet"
+          href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type = "text/javascript"
+            src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+</head>
+<body bgcolor="#eaeaea">
+
+<!--
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center" style="font-size: 25px;">Lifestyle Disease Predictor</a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down"></ul>
+            </div>
+
+        </nav>
+    </header>
+-->
+
+    <div id="color-bar">
+    <div id="nav-bar"> <div class = "center" style = "font-size: 30px; color: white; font-family: Georgia, serif;">
+        Lifestyle Disease Predictor
+    </div> </div><!-- End Nav Bar -->
+
+
+    </div><!-- End color Bar -->
+
+    <div id="content-parent">
+
+
+
+        <div class = "card" style="padding: 50px 3px 20px 50px; margin-bottom: -10px; margin-top: -10px; padding-bottom: 25px; padding-top: 75px;" >
+
+            <form id="theWebUserForm">
+
+                <!--
+                <span class="thumb" style="height: 0px; width: 0px; top: 10px; margin-left: 7px; left: 161.653px;">
+                    <span class="value" >Unhealthy Eating Habits: </span>
+                    <span class="value">28</span>
+                </span>
+                -->
+
+                <!--
+                <div class="row">
+                    <div class="col s6">
+                        <label style="font-size: 25px; margin-top: 30px;"> Unhealthy Eating Habits: </label>
+                    </div>
+                    <div class="col s6">
+                        <p class="range-field col s6 m12" style="width: 250px;">
+                            <input type="range" min="1" max="5" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+                        </p>
+                    </div>
+                </div>
+                -->
+
+                <label style="font-size: 25px; color: black;"> Enter Your Age: </label>
+                <p class="range-field col s6 m12" style="width: 250px;">
+                    <!-- <label class="active" for="first_name">Your Age</label> -->
+                    <input placeholder="Age" name = "age" id="first_name" type="text" class="validate">
+                </p>
+
+                <label style="font-size: 25px; color: black;"> Unhealthy Eating Habits:</label>
+                <p class="range-field col s6 m12" style="width: 250px;">
+                    <input  name = "unhealthyEatingHabits" type="range" min="1" max="5" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+                </p>
+
+                <label style="font-size: 25px; color: black;">Lack of Physical Activity:</label>
+                <p class="range-field" style="width: 250px;">
+                    <input name = "lackOfPhysicalActivity" type="range" min="1" max="5" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+                </p>
+
+                <label style="font-size: 25px; color: black;">Stress and Anxiety: </label>
+                <p class="range-field" style="width: 250px;">
+                    <input name = "stressAndAnxiety" type="range" min="1" max="5" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+                </p>
+
+                <label style="font-size: 25px; color: black;">Obesity: </label>
+                <div class = "row">
+                    <div class = "input-field col s12">
+                        <p>
+                            <input id = "noO" type = "radio" name = "obesity"
+                                   value = "0" checked />
+                            <label style="font-size: 20px;color: black;" for = "noO">No</label>
+                        </p>
+
+                        <p>
+                            <input id = "yesO" type = "radio" name = "obesity"
+                                   value = "1" />
+                            <label style="font-size: 20px;color: black;" for = "yesO">Yes</label>
+                        </p>
+
+                    </div>
+                </div>
+                <br>
+
+                <label style="font-size: 25px; color: black;">Alcoholism: </label>
+                <div class = "row">
+                    <div class = "input-field col s12">
+                        <p>
+                            <input id = "noAl" type = "radio" name = "alcoholism"
+                                   value = "0" checked />
+                            <label style="font-size: 20px;color: black;" for = "noAl">No</label>
+                        </p>
+
+                        <p>
+                            <input id = "yesAl" type = "radio" name = "alcoholism"
+                                   value = "1" />
+                            <label style="font-size: 20px;color: black;" for = "yesAl">Yes</label>
+                        </p>
+
+                    </div>
+                </div>
+                <br/>
+
+
+                <label style="font-size: 25px; color: black;">Poor Sleep: </label>
+                <p class="range-field" style="width: 250px;">
+                    <input name = "poorSleep" type="range" min="1" max="5" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)">
+                </p>
+
+
+                <label style="font-size: 25px; color: black;">Gender: </label>
+                <div class = "row">
+                    <div class = "input-field col s12">
+                        <p>
+                            <input id = "male" type = "radio" name = "gender"
+                                   value = "1" checked />
+                            <label style="font-size: 20px;color: black;" for = "male">Male</label>
+                        </p>
+
+                        <p>
+                            <input id = "female" type = "radio" name = "gender"
+                                   value = "0"/>
+                            <label style="font-size: 20px;color: black;" for = "female">Female</label>
+                        </p>
+
+                        <p>
+                            <input id = "other" type = "radio" name = "gender"
+                                   value = "1"/>
+                            <label style="font-size: 20px;color: black;" for = "other">Other</label>
+                        </p>
+                    </div>
+                </div>
+                <br>
+
+                <label style="font-size: 25px; color: black;">If he/she is currently suffering from any other lifestyle disease: </label>
+                <div class = "row">
+                    <div class = "input-field col s12">
+                        <p>
+                            <input id = "yesA" type = "radio" name = "anotherLifestyle"
+                                   value = "1" checked />
+                            <label style="font-size: 20px;color: black;" for = "yesA">Yes</label>
+                        </p>
+
+                        <p>
+                            <input id = "noA" type = "radio" name = "anotherLifestyle"
+                                   value = "0" />
+                            <label style="font-size: 20px;color: black;" for = "noA">No</label>
+                        </p>
+
+                    </div>
+                </div>
+                <br>
+
+                <label style="font-size: 25px; color: black;">Family history of a lifestyle disease: </label>
+                <div class = "row">
+                    <div class = "input-field col s12">
+                        <p>
+                            <input id = "yesH" type = "radio" name = "historyLifetyle"
+                                   value = "1" checked />
+                            <label style="font-size: 20px;color: black;" for = "yesH">Yes</label>
+                        </p>
+
+                        <p>
+                            <input id = "noH" type = "radio" name = "historyLifetyle"
+                                   value = "0" />
+                            <label style="font-size: 20px;color: black;" for = "noH">No</label>
+                        </p>
+
+                    </div>
+                </div>
+                <br>
+
+
+                <label style="font-size: 25px; color: black;">Smoking: </label>
+                <div class = "row">
+                    <div class = "input-field col s12">
+
+                        <p>
+                            <input id = "dailyS" type = "radio" name = "smoking"
+                                   value = "3" checked />
+                            <label style="font-size: 20px;color: black;" for = "dailyS">Daily</label>
+                        </p>
+
+                        <p>
+                            <input id = "sometimesS" type = "radio" name = "smoking"
+                                   value = "2"/>
+                            <label style="font-size: 20px;color: black;" for = "sometimesS">Sometimes</label>
+                        </p>
+
+                        <p>
+                            <input id = "neverS" type = "radio" name = "smoking"
+                                   value = "1"/>
+                            <label style="font-size: 20px;color: black;" for = "neverS">Never</label>
+                        </p>
+
+                    </div>
+                </div>
+                <br>
+
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+
+            </form>
+
+
+        </div>
+
+    </div><!-- End Nav content -->
+
+    <div style="height: 150px;">
+
+
+
+    </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large  light-blue">
+            <i class="large material-icons">share</i>
+        </a>
+        <!--
+        <ul>
+            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+            <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+        -->
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+
+     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript">
+            $('#theWebUserForm').submit(function(e) {
+                    e.preventDefault();
+
+                    var data = {};
+                    var Form = this;
+
+                    $.each(this.elements, function(i, v) {
+                        var input = $(v);
+                        data[input.attr("name")] = input.val();
+                        delete data["undefined"];
+                    });
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '/api/get_prediction',
+                        dataType: 'json',
+                        contentType: 'application/json; charset=utf-8',
+                        data: JSON.stringify(data),
+                        context: Form,
+                        success: function(callback) {
+                            console.log(callback);
+                            // Watch out for Cross Site Scripting security issues when setting dynamic content!
+
+                            if ( callback.result == 'You suffer from a lifestyle disease! ') {
+
+                                $(this).text(
+                                callback.result ).css({
+                                    "color": "#F06292",
+                                    "font-size": "35px",
+                                    "margin": "auto",
+                                    "width": "50%",
+                                    "margin-top": "-50px"});
+
+                            }
+                            else {
+
+                                $(this).text(
+                                callback.result ).css({
+                                    "color": "#5E35B1",
+                                    "font-size": "30px",
+                                    "margin": "auto",
+                                    "width": "50%",
+                                    "margin-top": "-50px"});
+
+                            }
+
+
+                        },
+                        error: function() {
+                            $(this).html("error!");
+                        }
+                    });
+                });
+        </script>
+
+
+</body>
+</html>
